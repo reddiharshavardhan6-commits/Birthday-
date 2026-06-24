@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sister!</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- PASSCODE -->
+<div id="view-passcode" class="view active">
+    <div class="passcode-wrapper">
+        <div class="polaroid-container">
+            <img src="https://i.postimg.cc/wMZtDg0q/IMG-20260527-193247.jpg">
+            <div class="polaroid-caption">Happy Birthday!</div>
+        </div>
+
+        <div class="lock-interface">
+            <div class="lock-title">Enter Passcode</div>
+
+            <div class="dots-container">
+                <div class="dot" id="dot-0"></div>
+                <div class="dot" id="dot-1"></div>
+                <div class="dot" id="dot-2"></div>
+                <div class="dot" id="dot-3"></div>
+                <div class="dot" id="dot-4"></div>
+                <div class="dot" id="dot-5"></div>
+            </div>
+
+            <div class="keypad">
+                <div class="key" onclick="pressKey('1')">1</div>
+                <div class="key" onclick="pressKey('2')">2</div>
+                <div class="key" onclick="pressKey('3')">3</div>
+                <div class="key" onclick="pressKey('4')">4</div>
+                <div class="key" onclick="pressKey('5')">5</div>
+                <div class="key" onclick="pressKey('6')">6</div>
+                <div class="key" onclick="pressKey('7')">7</div>
+                <div class="key" onclick="pressKey('8')">8</div>
+                <div class="key" onclick="pressKey('9')">9</div>
+                <div></div>
+                <div class="key" onclick="pressKey('0')">0</div>
+                <div class="key" onclick="clearKeys()">C</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- LOADING -->
+<div id="view-loading" class="view">
+    <div class="loading-text">Hey Sis! ✨</div>
+    <p>Preparing your birthday magical universe...</p>
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="load-progress"></div>
+    </div>
+</div>
+
+<!-- ENVELOPE -->
+<div id="view-envelope" class="view">
+    <div class="envelope-title">A special letter inside...</div>
+    <div class="envelope" onclick="openEnvelope()">
+        <div class="envelope-seal">💝</div>
+    </div>
+</div>
+
+<!-- LETTER -->
+<div id="view-letter" class="view">
+    <div class="letter-dashboard">
+
+        <div class="letter-header">
+            <h1>Happy Birthday Sister 🎉</h1>
+            <p>Built-in Best Friend & Confidante</p>
+        </div>
+
+        <div class="letter-content-grid">
+
+            <div class="letter-text">
+                <p>Dear Sister,</p><br>
+
+                <p>
+                    Thank you for always supporting me and making life happier.
+                    I wish your life becomes full of happiness, success and beautiful memories.
+                    May all your dreams come true this year.
+                </p>
+
+                <br>
+
+                <p>
+                    You are not only my sister but also my best friend forever ❤️
+                </p>
+
+                <br>
+
+                <p style="color:#ff6b8b;font-weight:bold;">
+                    With Love,<br>
+                    Your Brother
+                </p>
+            </div>
+
+            <div class="gallery-stack">
+                <img src="https://i.postimg.cc/yxMdkn8K/IMG-20260214-081645.png">
+                <img src="https://i.postimg.cc/PxcfRKZZ/1748245661807.jpg">
+            </div>
+
+        </div>
+
+        <button class="next-btn" onclick="goToCake()">
+            Make a Wish 🎂
+        </button>
+
+    </div>
+</div>
+
+<!-- CAKE -->
+<div id="view-cake" class="view">
+
+    <div class="cake-title" id="cake-instruction">
+        Tap the cake to blow candles!
+    </div>
+
+    <div class="cake-container" id="interactive-cake" onclick="blowCandles()">
+
+        <div class="candles-row">
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+        </div>
+
+        <div class="cake-base">
+
+            <div class="cake-face">
+                <div class="cake-eye"></div>
+                <div class="cake-eye"></div>
+            </div>
+
+            <div class="cake-smile"></div>
+
+        </div>
+    </div>
+
+    <button class="next-btn cake-fade-btn" id="finish-btn" onclick="goToFinalPage()">
+        See Final Surprise ✨
+    </button>
+
+    <canvas id="fw-canvas"></canvas>
+
+</div>
+
+<!-- FINAL -->
+<div id="view-final" class="view">
+    <div class="final-card">
+
+        <h2>Happy Birthday Again 🎉</h2>
+
+        <p>
+            May your smile always shine bright and your life stay filled with joy,
+            love and success forever ❤️
+        </p>
+
+        <button class="next-btn" onclick="location.reload()">
+            Restart Experience 🔄
+        </button>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
